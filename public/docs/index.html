@@ -83,7 +83,10 @@
                     <a href="#tasks">Tasks</a>
                 </li>
                                     <ul id="tocify-subheader-tasks" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="tasks-POSTapi-tasks">
+                                                    <li class="tocify-item level-2" data-unique="tasks-GETapi-tasks">
+                                <a href="#tasks-GETapi-tasks">GET api/tasks</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="tasks-POSTapi-tasks">
                                 <a href="#tasks-POSTapi-tasks">POST api/tasks</a>
                             </li>
                                                                         </ul>
@@ -113,7 +116,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 <pre><code class="language-yaml">http://localhost</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>Authenticate requests to this API's endpoints by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
+<p>To authenticate requests, include an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
 
@@ -138,8 +141,8 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"buster02@example.net\",
-    \"password\": \"ipsam\"
+    \"email\": \"gbruen@example.net\",
+    \"password\": \"incidunt\"
 }"
 </code></pre></div>
 
@@ -194,7 +197,7 @@ You can switch the language used with the tabs at the top right (or from the nav
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-auth"
-               value="buster02@example.net"
+               value="gbruen@example.net"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address.</p>
@@ -206,7 +209,7 @@ You can switch the language used with the tabs at the top right (or from the nav
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-auth"
-               value="ipsam"
+               value="incidunt"
                data-component="body" hidden>
     <br>
 
@@ -290,7 +293,97 @@ You can switch the language used with the tabs at the top right (or from the nav
 
     
 
-                                <h2 id="tasks-POSTapi-tasks">POST api/tasks</h2>
+                                <h2 id="tasks-GETapi-tasks">GET api/tasks</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-tasks">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost/api/tasks" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-tasks">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary>
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre>
+        </details>         <pre>
+
+<code class="language-json">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-tasks" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-tasks"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-tasks"></code></pre>
+</span>
+<span id="execution-error-GETapi-tasks" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-tasks"></code></pre>
+</span>
+<form id="form-GETapi-tasks" data-method="GET"
+      data-path="api/tasks"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-tasks', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-tasks"
+                    onclick="tryItOut('GETapi-tasks');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-tasks"
+                    onclick="cancelTryOut('GETapi-tasks');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-tasks" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/tasks</code></b>
+        </p>
+                <p>
+            <label id="auth-GETapi-tasks" hidden>Authorization header:
+                <b><code>Bearer </code></b>
+                <input type="text"
+                       name="Authorization"
+                       data-prefix="Bearer "
+                       data-endpoint="GETapi-tasks"
+                       data-component="header"></label>
+        </p>
+                </form>
+
+                    <h2 id="tasks-POSTapi-tasks">POST api/tasks</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -309,8 +402,8 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"title\": \"rjkkctvhooymtnznfkxcuawlydxwglwmwrjjavzcmtoctyralqkgsmuupegbodsnophixcpcmzwxodkuijtouaitmewkmakanxrtvuhystsyndgefczmwptcbfumtrapkinqeahamtarnbzoeuuxqoyijmkvkjifegwrwssqlablnvcmlxduvipqfqjwuiqpvahdzghyggsckkriqvfyalyymvvjdekwejzwmgksgjhxwgtwmbnccetc\",
-    \"description\": \"reiciendis\"
+    \"title\": \"qahpoqpfcpanreflctlnpshszxcutroalbfqhckfyzlpqvanbfazmewwwqkesppljctmjzhoxxmihczoqvdrkqykvsnkjpiushgqgvshpbwkhnwgczoslfcchpxnhhedoghqjjdrlkkxaqburfpyhrhtjmludhzfeqfem\",
+    \"description\": \"maxime\"
 }"
 </code></pre></div>
 
@@ -374,7 +467,7 @@ You can switch the language used with the tabs at the top right (or from the nav
                 <input type="text"
                name="title"
                data-endpoint="POSTapi-tasks"
-               value="rjkkctvhooymtnznfkxcuawlydxwglwmwrjjavzcmtoctyralqkgsmuupegbodsnophixcpcmzwxodkuijtouaitmewkmakanxrtvuhystsyndgefczmwptcbfumtrapkinqeahamtarnbzoeuuxqoyijmkvkjifegwrwssqlablnvcmlxduvipqfqjwuiqpvahdzghyggsckkriqvfyalyymvvjdekwejzwmgksgjhxwgtwmbnccetc"
+               value="qahpoqpfcpanreflctlnpshszxcutroalbfqhckfyzlpqvanbfazmewwwqkesppljctmjzhoxxmihczoqvdrkqykvsnkjpiushgqgvshpbwkhnwgczoslfcchpxnhhedoghqjjdrlkkxaqburfpyhrhtjmludhzfeqfem"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -386,7 +479,7 @@ You can switch the language used with the tabs at the top right (or from the nav
                 <input type="text"
                name="description"
                data-endpoint="POSTapi-tasks"
-               value="reiciendis"
+               value="maxime"
                data-component="body" hidden>
     <br>
 

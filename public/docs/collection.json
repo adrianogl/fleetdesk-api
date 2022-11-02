@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "811aa9dd-330a-4787-b329-eee1642397dc",
+        "_postman_id": "db55b5fc-1503-4c4b-b8a1-841a1b3a5eda",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"buster02@example.net\",\"password\":\"ipsam\"}"
+                            "raw": "{\"email\":\"gbruen@example.net\",\"password\":\"incidunt\"}"
                         },
                         "description": "",
                         "auth": {
@@ -82,6 +82,51 @@
             "description": "",
             "item": [
                 {
+                    "name": "GET api\/tasks",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tasks",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tasks"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
                     "name": "POST api\/tasks",
                     "request": {
                         "url": {
@@ -103,7 +148,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"rjkkctvhooymtnznfkxcuawlydxwglwmwrjjavzcmtoctyralqkgsmuupegbodsnophixcpcmzwxodkuijtouaitmewkmakanxrtvuhystsyndgefczmwptcbfumtrapkinqeahamtarnbzoeuuxqoyijmkvkjifegwrwssqlablnvcmlxduvipqfqjwuiqpvahdzghyggsckkriqvfyalyymvvjdekwejzwmgksgjhxwgtwmbnccetc\",\"description\":\"reiciendis\"}"
+                            "raw": "{\"title\":\"qahpoqpfcpanreflctlnpshszxcutroalbfqhckfyzlpqvanbfazmewwwqkesppljctmjzhoxxmihczoqvdrkqykvsnkjpiushgqgvshpbwkhnwgczoslfcchpxnhhedoghqjjdrlkkxaqburfpyhrhtjmludhzfeqfem\",\"description\":\"maxime\"}"
                         },
                         "description": ""
                     },

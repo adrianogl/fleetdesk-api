@@ -39,11 +39,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: buster02@example.net
+                  example: gbruen@example.net
                 password:
                   type: string
                   description: ''
-                  example: ipsam
+                  example: incidunt
               required:
                 - email
                 - password
@@ -78,6 +78,46 @@ paths:
       tags:
         - Auth
   /api/tasks:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Tasks
     post:
       summary: ''
       description: ''
@@ -116,11 +156,11 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: rjkkctvhooymtnznfkxcuawlydxwglwmwrjjavzcmtoctyralqkgsmuupegbodsnophixcpcmzwxodkuijtouaitmewkmakanxrtvuhystsyndgefczmwptcbfumtrapkinqeahamtarnbzoeuuxqoyijmkvkjifegwrwssqlablnvcmlxduvipqfqjwuiqpvahdzghyggsckkriqvfyalyymvvjdekwejzwmgksgjhxwgtwmbnccetc
+                  example: qahpoqpfcpanreflctlnpshszxcutroalbfqhckfyzlpqvanbfazmewwwqkesppljctmjzhoxxmihczoqvdrkqykvsnkjpiushgqgvshpbwkhnwgczoslfcchpxnhhedoghqjjdrlkkxaqburfpyhrhtjmludhzfeqfem
                 description:
                   type: string
                   description: ''
-                  example: reiciendis
+                  example: maxime
               required:
                 - title
 tags:
