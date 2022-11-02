@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\AuthAction;
 use App\Http\Controllers\Api\LogoutAction;
+use App\Http\Controllers\Api\Tasks\CreateAction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,3 +19,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/auth', AuthAction::class);
 Route::post('/logout', LogoutAction::class);
+
+Route::post('/tasks', CreateAction::class);

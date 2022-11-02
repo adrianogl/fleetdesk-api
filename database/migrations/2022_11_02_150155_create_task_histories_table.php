@@ -15,7 +15,7 @@ return new class extends Migration
             $table->enum('action', ['create', 'update', 'delete']);
             $table->string('old_value')->nullable();
             $table->string('new_value')->nullable();
-            $table->creating();
+            $table->timestamp('created_at');
         });
     }
 

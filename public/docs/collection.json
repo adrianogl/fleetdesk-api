@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "ef404d74-d97b-4d96-ac72-c6e74eb84f91",
+        "_postman_id": "811aa9dd-330a-4787-b329-eee1642397dc",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"vyost@example.com\",\"password\":\"tenetur\"}"
+                            "raw": "{\"email\":\"buster02@example.net\",\"password\":\"ipsam\"}"
                         },
                         "description": "",
                         "auth": {
@@ -71,6 +71,40 @@
                             }
                         ],
                         "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Tasks",
+            "description": "",
+            "item": [
+                {
+                    "name": "POST api\/tasks",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tasks",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tasks"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"rjkkctvhooymtnznfkxcuawlydxwglwmwrjjavzcmtoctyralqkgsmuupegbodsnophixcpcmzwxodkuijtouaitmewkmakanxrtvuhystsyndgefczmwptcbfumtrapkinqeahamtarnbzoeuuxqoyijmkvkjifegwrwssqlablnvcmlxduvipqfqjwuiqpvahdzghyggsckkriqvfyalyymvvjdekwejzwmgksgjhxwgtwmbnccetc\",\"description\":\"reiciendis\"}"
+                        },
                         "description": ""
                     },
                     "response": []

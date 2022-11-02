@@ -1,0 +1,53 @@
+name: Tasks
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/tasks
+    metadata:
+      groupName: Tasks
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: rjkkctvhooymtnznfkxcuawlydxwglwmwrjjavzcmtoctyralqkgsmuupegbodsnophixcpcmzwxodkuijtouaitmewkmakanxrtvuhystsyndgefczmwptcbfumtrapkinqeahamtarnbzoeuuxqoyijmkvkjifegwrwssqlablnvcmlxduvipqfqjwuiqpvahdzghyggsckkriqvfyalyymvvjdekwejzwmgksgjhxwgtwmbnccetc
+        type: string
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: false
+        example: reiciendis
+        type: string
+        custom: []
+    cleanBodyParameters:
+      title: rjkkctvhooymtnznfkxcuawlydxwglwmwrjjavzcmtoctyralqkgsmuupegbodsnophixcpcmzwxodkuijtouaitmewkmakanxrtvuhystsyndgefczmwptcbfumtrapkinqeahamtarnbzoeuuxqoyijmkvkjifegwrwssqlablnvcmlxduvipqfqjwuiqpvahdzghyggsckkriqvfyalyymvvjdekwejzwmgksgjhxwgtwmbnccetc
+      description: reiciendis
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer g5ZV4P18hDd36Evbafc6eak'
+    controller: null
+    method: null
+    route: null
+    custom: []
