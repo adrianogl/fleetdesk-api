@@ -39,11 +39,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: zemlak.tiffany@example.com
+                  example: vyost@example.com
                 password:
                   type: string
                   description: ''
-                  example: assumenda
+                  example: tenetur
               required:
                 - email
                 - password

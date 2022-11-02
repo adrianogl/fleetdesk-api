@@ -44,6 +44,7 @@
     </span>
 </a>
 <div class="tocify-wrapper">
+            <img src="docs/images/logo.png" alt="logo" class="logo" style="padding-top: 10px;" width="100%"/>
     
             <div class="lang-selector">
                                             <button type="button" class="lang-button" data-language-name="bash">bash</button>
@@ -102,7 +103,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 <pre><code class="language-yaml">http://localhost</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>This API is authenticated by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
+<p>To authenticate requests, include an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
 
@@ -127,8 +128,8 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"zemlak.tiffany@example.com\",
-    \"password\": \"assumenda\"
+    \"email\": \"vyost@example.com\",
+    \"password\": \"tenetur\"
 }"
 </code></pre></div>
 
@@ -183,7 +184,7 @@ You can switch the language used with the tabs at the top right (or from the nav
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-auth"
-               value="zemlak.tiffany@example.com"
+               value="vyost@example.com"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address.</p>
@@ -195,7 +196,7 @@ You can switch the language used with the tabs at the top right (or from the nav
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-auth"
-               value="assumenda"
+               value="tenetur"
                data-component="body" hidden>
     <br>
 
