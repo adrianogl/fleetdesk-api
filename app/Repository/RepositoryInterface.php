@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 interface RepositoryInterface
 {
-    public function all(array $columns): ?Collection;
     public function findById(int $id): ?Model;
     public function create(array $data): Model;
+    public function update(int $modelId, array $data): Model;
+    public function delete(int $modelId): bool;
 }

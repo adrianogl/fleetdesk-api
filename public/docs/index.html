@@ -78,6 +78,16 @@
                             </li>
                                                                         </ul>
                             </ul>
+                    <ul id="tocify-header-endpoints" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="endpoints">
+                    <a href="#endpoints">Endpoints</a>
+                </li>
+                                    <ul id="tocify-subheader-endpoints" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="endpoints-DELETEapi-tasks--task_id-">
+                                <a href="#endpoints-DELETEapi-tasks--task_id-">DELETE api/tasks/{task_id}</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
                     <ul id="tocify-header-tasks" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="tasks">
                     <a href="#tasks">Tasks</a>
@@ -88,6 +98,9 @@
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="tasks-POSTapi-tasks">
                                 <a href="#tasks-POSTapi-tasks">POST api/tasks</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="tasks-PATCHapi-tasks--task_id-">
+                                <a href="#tasks-PATCHapi-tasks--task_id-">PATCH api/tasks/{task_id}</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -116,7 +129,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 <pre><code class="language-yaml">http://localhost</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>Authenticate requests to this API's endpoints by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
+<p>To authenticate requests, include an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
 
@@ -141,8 +154,8 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"porter51@example.com\",
-    \"password\": \"officia\"
+    \"email\": \"dorothea90@example.org\",
+    \"password\": \"et\"
 }"
 </code></pre></div>
 
@@ -197,7 +210,7 @@ You can switch the language used with the tabs at the top right (or from the nav
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-auth"
-               value="porter51@example.com"
+               value="dorothea90@example.org"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address.</p>
@@ -209,7 +222,7 @@ You can switch the language used with the tabs at the top right (or from the nav
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-auth"
-               value="officia"
+               value="et"
                data-component="body" hidden>
     <br>
 
@@ -288,6 +301,96 @@ You can switch the language used with the tabs at the top right (or from the nav
                        data-component="header"></label>
         </p>
                 </form>
+
+                <h1 id="endpoints">Endpoints</h1>
+
+    
+
+                                <h2 id="endpoints-DELETEapi-tasks--task_id-">DELETE api/tasks/{task_id}</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-DELETEapi-tasks--task_id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request DELETE \
+    "http://localhost/api/tasks/20" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+</span>
+
+<span id="example-responses-DELETEapi-tasks--task_id-">
+</span>
+<span id="execution-results-DELETEapi-tasks--task_id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-DELETEapi-tasks--task_id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-tasks--task_id-"></code></pre>
+</span>
+<span id="execution-error-DELETEapi-tasks--task_id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-tasks--task_id-"></code></pre>
+</span>
+<form id="form-DELETEapi-tasks--task_id-" data-method="DELETE"
+      data-path="api/tasks/{task_id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('DELETEapi-tasks--task_id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-DELETEapi-tasks--task_id-"
+                    onclick="tryItOut('DELETEapi-tasks--task_id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-DELETEapi-tasks--task_id-"
+                    onclick="cancelTryOut('DELETEapi-tasks--task_id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-DELETEapi-tasks--task_id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-red">DELETE</small>
+            <b><code>api/tasks/{task_id}</code></b>
+        </p>
+                <p>
+            <label id="auth-DELETEapi-tasks--task_id-" hidden>Authorization header:
+                <b><code>Bearer </code></b>
+                <input type="text"
+                       name="Authorization"
+                       data-prefix="Bearer "
+                       data-endpoint="DELETEapi-tasks--task_id-"
+                       data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>task_id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number"
+               name="task_id"
+               data-endpoint="DELETEapi-tasks--task_id-"
+               value="20"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the task.</p>
+            </p>
+                    </form>
 
                 <h1 id="tasks">Tasks</h1>
 
@@ -415,8 +518,8 @@ access-control-allow-origin: *
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"title\": \"bbfqeoimiguzgkjqmtutefwubqbltxzoeybtngfyfxeeczcbrmqyqmlcuqwzvsvdkiaaudeacvzsscszpmbztsxmzkocjganykiycqkenjinxnwmxknlvhagqpgfmptheavcvelmfrvkhsbiudjh\",
-    \"description\": \"aut\"
+    \"title\": \"jhppdimezpvxbzicgmthmzyimibhkvymabjomfouzvkqnsyrenqqjhrmxusuavudbnuzrnpyfhjplskqjyuymwzmpnjzzxsokgsqyhecfqtrbfxnmdfnxybjcghpntvsqsylpdntjfbdghbygfvxbfuxhdjeru\",
+    \"description\": \"deleniti\"
 }"
 </code></pre></div>
 
@@ -480,7 +583,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="title"
                data-endpoint="POSTapi-tasks"
-               value="bbfqeoimiguzgkjqmtutefwubqbltxzoeybtngfyfxeeczcbrmqyqmlcuqwzvsvdkiaaudeacvzsscszpmbztsxmzkocjganykiycqkenjinxnwmxknlvhagqpgfmptheavcvelmfrvkhsbiudjh"
+               value="jhppdimezpvxbzicgmthmzyimibhkvymabjomfouzvkqnsyrenqqjhrmxusuavudbnuzrnpyfhjplskqjyuymwzmpnjzzxsokgsqyhecfqtrbfxnmdfnxybjcghpntvsqsylpdntjfbdghbygfvxbfuxhdjeru"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -492,7 +595,123 @@ access-control-allow-origin: *
                 <input type="text"
                name="description"
                data-endpoint="POSTapi-tasks"
-               value="aut"
+               value="deleniti"
+               data-component="body" hidden>
+    <br>
+
+        </p>
+        </form>
+
+                    <h2 id="tasks-PATCHapi-tasks--task_id-">PATCH api/tasks/{task_id}</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-PATCHapi-tasks--task_id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PATCH \
+    "http://localhost/api/tasks/16" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"status\": \"pending\",
+    \"description\": \"temporibus\"
+}"
+</code></pre></div>
+
+</span>
+
+<span id="example-responses-PATCHapi-tasks--task_id-">
+</span>
+<span id="execution-results-PATCHapi-tasks--task_id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PATCHapi-tasks--task_id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PATCHapi-tasks--task_id-"></code></pre>
+</span>
+<span id="execution-error-PATCHapi-tasks--task_id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PATCHapi-tasks--task_id-"></code></pre>
+</span>
+<form id="form-PATCHapi-tasks--task_id-" data-method="PATCH"
+      data-path="api/tasks/{task_id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      data-headers='{"Authorization":"Bearer {YOUR_AUTH_KEY}","Content-Type":"application\/json","Accept":"application\/json"}'
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PATCHapi-tasks--task_id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PATCHapi-tasks--task_id-"
+                    onclick="tryItOut('PATCHapi-tasks--task_id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PATCHapi-tasks--task_id-"
+                    onclick="cancelTryOut('PATCHapi-tasks--task_id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PATCHapi-tasks--task_id-" hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-purple">PATCH</small>
+            <b><code>api/tasks/{task_id}</code></b>
+        </p>
+                <p>
+            <label id="auth-PATCHapi-tasks--task_id-" hidden>Authorization header:
+                <b><code>Bearer </code></b>
+                <input type="text"
+                       name="Authorization"
+                       data-prefix="Bearer "
+                       data-endpoint="PATCHapi-tasks--task_id-"
+                       data-component="header"></label>
+        </p>
+                <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <p>
+                <b><code>task_id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+ &nbsp;
+                <input type="number"
+               name="task_id"
+               data-endpoint="PATCHapi-tasks--task_id-"
+               value="16"
+               data-component="url" hidden>
+    <br>
+<p>The ID of the task.</p>
+            </p>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <p>
+            <b><code>status</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text"
+               name="status"
+               data-endpoint="PATCHapi-tasks--task_id-"
+               value="pending"
+               data-component="body" hidden>
+    <br>
+<p>Must be one of <code>pending</code> or <code>completed</code>.</p>
+        </p>
+                <p>
+            <b><code>description</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text"
+               name="description"
+               data-endpoint="PATCHapi-tasks--task_id-"
+               value="temporibus"
                data-component="body" hidden>
     <br>
 

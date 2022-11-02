@@ -7,13 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class BaseRepository implements RepositoryInterface
 {
-    public function all(array $columns = ['*']): Collection
-    {
-        return $this->model->newQuery()
-            ->select($columns)
-            ->get();
-    }
-
     public function findById(int $modelId, array $columns = ['*']): ?Model
     {
         return $this->model->newQuery()
@@ -26,5 +19,18 @@ class BaseRepository implements RepositoryInterface
     {
         return $this->model->newQuery()
             ->create($data);
+    }
+
+    public function update(int $modelId, array $data): Model
+    {
+        $model = $this->findById($modelId);
+        $model->update($data);
+        return $model;
+    }
+
+    public function delete(int $modelId): bool
+    {
+        $model = $this->findById($modelId);
+        return $model->delete();
     }
 }

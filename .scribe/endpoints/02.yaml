@@ -1,0 +1,45 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/tasks/{task_id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      task_id:
+        name: task_id
+        description: 'The ID of the task.'
+        required: true
+        example: 20
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      task_id: 20
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer k51fE66DZVb4dhPevg38aca'
+    controller: null
+    method: null
+    route: null
+    custom: []

@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "eced45c6-7327-4658-a3e9-8b0b88a9a57f",
+        "_postman_id": "03e724d5-0fb2-47c6-a6cc-5628833bf774",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"porter51@example.com\",\"password\":\"officia\"}"
+                            "raw": "{\"email\":\"dorothea90@example.org\",\"password\":\"et\"}"
                         },
                         "description": "",
                         "auth": {
@@ -60,6 +60,45 @@
                             "raw": "{{baseUrl}}\/api\/logout"
                         },
                         "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "DELETE api\/tasks\/{task_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tasks\/:task_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tasks\/:task_id",
+                            "variable": [
+                                {
+                                    "id": "task_id",
+                                    "key": "task_id",
+                                    "value": "20",
+                                    "description": "The ID of the task."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -155,7 +194,43 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"bbfqeoimiguzgkjqmtutefwubqbltxzoeybtngfyfxeeczcbrmqyqmlcuqwzvsvdkiaaudeacvzsscszpmbztsxmzkocjganykiycqkenjinxnwmxknlvhagqpgfmptheavcvelmfrvkhsbiudjh\",\"description\":\"aut\"}"
+                            "raw": "{\"title\":\"jhppdimezpvxbzicgmthmzyimibhkvymabjomfouzvkqnsyrenqqjhrmxusuavudbnuzrnpyfhjplskqjyuymwzmpnjzzxsokgsqyhecfqtrbfxnmdfnxybjcghpntvsqsylpdntjfbdghbygfvxbfuxhdjeru\",\"description\":\"deleniti\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PATCH api\/tasks\/{task_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/tasks\/:task_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/tasks\/:task_id",
+                            "variable": [
+                                {
+                                    "id": "task_id",
+                                    "key": "task_id",
+                                    "value": "16",
+                                    "description": "The ID of the task."
+                                }
+                            ]
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"status\":\"pending\",\"description\":\"temporibus\"}"
                         },
                         "description": ""
                     },

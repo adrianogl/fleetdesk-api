@@ -49,7 +49,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer D1Zevfk4aVbh53cd6EP86ag'
+      - 'Bearer e65kEPVhc8aaDg631fb4vZd'
     controller: null
     method: null
     route: null
@@ -80,26 +80,84 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: bbfqeoimiguzgkjqmtutefwubqbltxzoeybtngfyfxeeczcbrmqyqmlcuqwzvsvdkiaaudeacvzsscszpmbztsxmzkocjganykiycqkenjinxnwmxknlvhagqpgfmptheavcvelmfrvkhsbiudjh
+        example: jhppdimezpvxbzicgmthmzyimibhkvymabjomfouzvkqnsyrenqqjhrmxusuavudbnuzrnpyfhjplskqjyuymwzmpnjzzxsokgsqyhecfqtrbfxnmdfnxybjcghpntvsqsylpdntjfbdghbygfvxbfuxhdjeru
         type: string
         custom: []
       description:
         name: description
         description: ''
         required: false
-        example: aut
+        example: deleniti
         type: string
         custom: []
     cleanBodyParameters:
-      title: bbfqeoimiguzgkjqmtutefwubqbltxzoeybtngfyfxeeczcbrmqyqmlcuqwzvsvdkiaaudeacvzsscszpmbztsxmzkocjganykiycqkenjinxnwmxknlvhagqpgfmptheavcvelmfrvkhsbiudjh
-      description: aut
+      title: jhppdimezpvxbzicgmthmzyimibhkvymabjomfouzvkqnsyrenqqjhrmxusuavudbnuzrnpyfhjplskqjyuymwzmpnjzzxsokgsqyhecfqtrbfxnmdfnxybjcghpntvsqsylpdntjfbdghbygfvxbfuxhdjeru
+      description: deleniti
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer kf6DEe5V164PgbZhdav3a8c'
+      - 'Bearer v61a54EfZdkcV8gDabh3e6P'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PATCH
+    uri: 'api/tasks/{task_id}'
+    metadata:
+      groupName: Tasks
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      task_id:
+        name: task_id
+        description: 'The ID of the task.'
+        required: true
+        example: 16
+        type: integer
+        custom: []
+    cleanUrlParameters:
+      task_id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      status:
+        name: status
+        description: 'Must be one of <code>pending</code> or <code>completed</code>.'
+        required: false
+        example: pending
+        type: string
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: false
+        example: temporibus
+        type: string
+        custom: []
+    cleanBodyParameters:
+      status: pending
+      description: temporibus
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer Vfk6DPg8h34b56eZEav1dca'
     controller: null
     method: null
     route: null
