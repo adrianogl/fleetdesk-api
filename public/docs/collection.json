@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "341a84e7-296d-4751-8e78-80bb70ce8735",
+        "_postman_id": "eaed09bf-19f7-45a9-97f8-9a1cdac37e07",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,12 +41,37 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"loma63@example.org\",\"password\":\"magnam\"}"
+                            "raw": "{\"email\":\"davin.predovic@example.com\",\"password\":\"qui\"}"
                         },
                         "description": "",
                         "auth": {
                             "type": "noauth"
                         }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "POST api\/logout",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/logout",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/logout"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
                     },
                     "response": []
                 }

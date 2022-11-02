@@ -39,15 +39,44 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: loma63@example.org
+                  example: davin.predovic@example.com
                 password:
                   type: string
                   description: ''
-                  example: magnam
+                  example: qui
               required:
                 - email
                 - password
       security: []
+  /api/logout:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Authorization
+          description: ''
+          example: 'Bearer {YOUR_AUTH_KEY}'
+          schema:
+            type: string
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
 tags:
   -
     name: Endpoints

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AuthAction;
+use App\Http\Controllers\Api\LogoutAction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/auth', AuthAction::class);
+Route::post('/logout', LogoutAction::class);
