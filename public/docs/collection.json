@@ -10,13 +10,13 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "eaed09bf-19f7-45a9-97f8-9a1cdac37e07",
+        "_postman_id": "dae9af52-ba76-4264-96e3-cc25cb689e9a",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
         {
-            "name": "Endpoints",
+            "name": "Auth",
             "description": "",
             "item": [
                 {
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"davin.predovic@example.com\",\"password\":\"qui\"}"
+                            "raw": "{\"email\":\"zemlak.tiffany@example.com\",\"password\":\"assumenda\"}"
                         },
                         "description": "",
                         "auth": {

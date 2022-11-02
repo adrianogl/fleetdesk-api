@@ -11,6 +11,7 @@ class AuthAction extends Controller
 {
     /**
      * @unauthenticated
+     * @group Auth
      */
     public function __invoke(Guard $auth, AuthRequest $request): JsonResponse
     {

@@ -64,16 +64,16 @@
                     <a href="#authenticating-requests">Authenticating requests</a>
                 </li>
                             </ul>
-                    <ul id="tocify-header-endpoints" class="tocify-header">
-                <li class="tocify-item level-1" data-unique="endpoints">
-                    <a href="#endpoints">Endpoints</a>
+                    <ul id="tocify-header-auth" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="auth">
+                    <a href="#auth">Auth</a>
                 </li>
-                                    <ul id="tocify-subheader-endpoints" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-auth">
-                                <a href="#endpoints-POSTapi-auth">POST api/auth</a>
+                                    <ul id="tocify-subheader-auth" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="auth-POSTapi-auth">
+                                <a href="#auth-POSTapi-auth">POST api/auth</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-logout">
-                                <a href="#endpoints-POSTapi-logout">POST api/logout</a>
+                                                                                <li class="tocify-item level-2" data-unique="auth-POSTapi-logout">
+                                <a href="#auth-POSTapi-logout">POST api/logout</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -102,15 +102,15 @@ You can switch the language used with the tabs at the top right (or from the nav
 <pre><code class="language-yaml">http://localhost</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>To authenticate requests, include an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
+<p>This API is authenticated by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
 
-        <h1 id="endpoints">Endpoints</h1>
+        <h1 id="auth">Auth</h1>
 
     
 
-                                <h2 id="endpoints-POSTapi-auth">POST api/auth</h2>
+                                <h2 id="auth-POSTapi-auth">POST api/auth</h2>
 
 <p>
 </p>
@@ -127,8 +127,8 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"davin.predovic@example.com\",
-    \"password\": \"qui\"
+    \"email\": \"zemlak.tiffany@example.com\",
+    \"password\": \"assumenda\"
 }"
 </code></pre></div>
 
@@ -183,7 +183,7 @@ You can switch the language used with the tabs at the top right (or from the nav
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-auth"
-               value="davin.predovic@example.com"
+               value="zemlak.tiffany@example.com"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address.</p>
@@ -195,14 +195,14 @@ You can switch the language used with the tabs at the top right (or from the nav
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-auth"
-               value="qui"
+               value="assumenda"
                data-component="body" hidden>
     <br>
 
         </p>
         </form>
 
-                    <h2 id="endpoints-POSTapi-logout">POST api/logout</h2>
+                    <h2 id="auth-POSTapi-logout">POST api/logout</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>

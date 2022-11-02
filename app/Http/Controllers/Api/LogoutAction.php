@@ -13,6 +13,9 @@ class LogoutAction extends Controller
         $this->middleware('auth:api');
     }
 
+    /**
+     * @group Auth
+     */
     public function __invoke(): JsonResponse
     {
         Auth::logout();

@@ -28,7 +28,7 @@ paths:
             type: string
       responses: {  }
       tags:
-        - Endpoints
+        - Auth
       requestBody:
         required: true
         content:
@@ -39,11 +39,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: davin.predovic@example.com
+                  example: zemlak.tiffany@example.com
                 password:
                   type: string
                   description: ''
-                  example: qui
+                  example: assumenda
               required:
                 - email
                 - password
@@ -76,10 +76,10 @@ paths:
             type: string
       responses: {  }
       tags:
-        - Endpoints
+        - Auth
 tags:
   -
-    name: Endpoints
+    name: Auth
     description: ''
 components:
   securitySchemes:
