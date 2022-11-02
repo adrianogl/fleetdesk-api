@@ -39,11 +39,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: gbruen@example.net
+                  example: porter51@example.com
                 password:
                   type: string
                   description: ''
-                  example: incidunt
+                  example: officia
               required:
                 - email
                 - password
@@ -82,6 +82,16 @@ paths:
       summary: ''
       description: ''
       parameters:
+        -
+          in: query
+          name: status
+          description: 'Filter by status (pending,completed).'
+          example: completed
+          required: false
+          schema:
+            type: string
+            description: 'Filter by status (pending,completed).'
+            example: completed
         -
           in: header
           name: Authorization
@@ -156,11 +166,11 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: qahpoqpfcpanreflctlnpshszxcutroalbfqhckfyzlpqvanbfazmewwwqkesppljctmjzhoxxmihczoqvdrkqykvsnkjpiushgqgvshpbwkhnwgczoslfcchpxnhhedoghqjjdrlkkxaqburfpyhrhtjmludhzfeqfem
+                  example: bbfqeoimiguzgkjqmtutefwubqbltxzoeybtngfyfxeeczcbrmqyqmlcuqwzvsvdkiaaudeacvzsscszpmbztsxmzkocjganykiycqkenjinxnwmxknlvhagqpgfmptheavcvelmfrvkhsbiudjh
                 description:
                   type: string
                   description: ''
-                  example: maxime
+                  example: aut
               required:
                 - title
 tags:

@@ -116,7 +116,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 <pre><code class="language-yaml">http://localhost</code></pre>
 
         <h1 id="authenticating-requests">Authenticating requests</h1>
-<p>To authenticate requests, include an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
+<p>Authenticate requests to this API's endpoints by sending an <strong><code>Authorization</code></strong> header with the value <strong><code>"Bearer {YOUR_AUTH_KEY}"</code></strong>.</p>
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
 
@@ -141,8 +141,8 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"gbruen@example.net\",
-    \"password\": \"incidunt\"
+    \"email\": \"porter51@example.com\",
+    \"password\": \"officia\"
 }"
 </code></pre></div>
 
@@ -197,7 +197,7 @@ You can switch the language used with the tabs at the top right (or from the nav
                 <input type="text"
                name="email"
                data-endpoint="POSTapi-auth"
-               value="gbruen@example.net"
+               value="porter51@example.com"
                data-component="body" hidden>
     <br>
 <p>Must be a valid email address.</p>
@@ -209,7 +209,7 @@ You can switch the language used with the tabs at the top right (or from the nav
                 <input type="text"
                name="password"
                data-endpoint="POSTapi-auth"
-               value="incidunt"
+               value="officia"
                data-component="body" hidden>
     <br>
 
@@ -307,7 +307,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/tasks" \
+    --get "http://localhost/api/tasks?status=completed" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -381,6 +381,19 @@ access-control-allow-origin: *
                        data-endpoint="GETapi-tasks"
                        data-component="header"></label>
         </p>
+                    <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+                    <p>
+                <b><code>status</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text"
+               name="status"
+               data-endpoint="GETapi-tasks"
+               value="completed"
+               data-component="query" hidden>
+    <br>
+<p>Filter by status (pending,completed).</p>
+            </p>
                 </form>
 
                     <h2 id="tasks-POSTapi-tasks">POST api/tasks</h2>
@@ -402,8 +415,8 @@ access-control-allow-origin: *
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"title\": \"qahpoqpfcpanreflctlnpshszxcutroalbfqhckfyzlpqvanbfazmewwwqkesppljctmjzhoxxmihczoqvdrkqykvsnkjpiushgqgvshpbwkhnwgczoslfcchpxnhhedoghqjjdrlkkxaqburfpyhrhtjmludhzfeqfem\",
-    \"description\": \"maxime\"
+    \"title\": \"bbfqeoimiguzgkjqmtutefwubqbltxzoeybtngfyfxeeczcbrmqyqmlcuqwzvsvdkiaaudeacvzsscszpmbztsxmzkocjganykiycqkenjinxnwmxknlvhagqpgfmptheavcvelmfrvkhsbiudjh\",
+    \"description\": \"aut\"
 }"
 </code></pre></div>
 
@@ -467,7 +480,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="title"
                data-endpoint="POSTapi-tasks"
-               value="qahpoqpfcpanreflctlnpshszxcutroalbfqhckfyzlpqvanbfazmewwwqkesppljctmjzhoxxmihczoqvdrkqykvsnkjpiushgqgvshpbwkhnwgczoslfcchpxnhhedoghqjjdrlkkxaqburfpyhrhtjmludhzfeqfem"
+               value="bbfqeoimiguzgkjqmtutefwubqbltxzoeybtngfyfxeeczcbrmqyqmlcuqwzvsvdkiaaudeacvzsscszpmbztsxmzkocjganykiycqkenjinxnwmxknlvhagqpgfmptheavcvelmfrvkhsbiudjh"
                data-component="body" hidden>
     <br>
 <p>Must not be greater than 255 characters.</p>
@@ -479,7 +492,7 @@ access-control-allow-origin: *
                 <input type="text"
                name="description"
                data-endpoint="POSTapi-tasks"
-               value="maxime"
+               value="aut"
                data-component="body" hidden>
     <br>
 

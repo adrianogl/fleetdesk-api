@@ -20,8 +20,16 @@ endpoints:
       Accept: application/json
     urlParameters: []
     cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
+    queryParameters:
+      status:
+        name: status
+        description: 'Filter by status (pending,completed).'
+        required: false
+        example: completed
+        type: string
+        custom: []
+    cleanQueryParameters:
+      status: completed
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -39,7 +47,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer vg8dakD61hcZ64eV5fbPE3a'
+      - 'Bearer D1Zevfk4aVbh53cd6EP86ag'
     controller: null
     method: null
     route: null
@@ -70,26 +78,26 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: qahpoqpfcpanreflctlnpshszxcutroalbfqhckfyzlpqvanbfazmewwwqkesppljctmjzhoxxmihczoqvdrkqykvsnkjpiushgqgvshpbwkhnwgczoslfcchpxnhhedoghqjjdrlkkxaqburfpyhrhtjmludhzfeqfem
+        example: bbfqeoimiguzgkjqmtutefwubqbltxzoeybtngfyfxeeczcbrmqyqmlcuqwzvsvdkiaaudeacvzsscszpmbztsxmzkocjganykiycqkenjinxnwmxknlvhagqpgfmptheavcvelmfrvkhsbiudjh
         type: string
         custom: []
       description:
         name: description
         description: ''
         required: false
-        example: maxime
+        example: aut
         type: string
         custom: []
     cleanBodyParameters:
-      title: qahpoqpfcpanreflctlnpshszxcutroalbfqhckfyzlpqvanbfazmewwwqkesppljctmjzhoxxmihczoqvdrkqykvsnkjpiushgqgvshpbwkhnwgczoslfcchpxnhhedoghqjjdrlkkxaqburfpyhrhtjmludhzfeqfem
-      description: maxime
+      title: bbfqeoimiguzgkjqmtutefwubqbltxzoeybtngfyfxeeczcbrmqyqmlcuqwzvsvdkiaaudeacvzsscszpmbztsxmzkocjganykiycqkenjinxnwmxknlvhagqpgfmptheavcvelmfrvkhsbiudjh
+      description: aut
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 1ve4hgEP63dfbca68Za5VkD'
+      - 'Bearer kf6DEe5V164PgbZhdav3a8c'
     controller: null
     method: null
     route: null

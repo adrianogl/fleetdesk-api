@@ -16,10 +16,11 @@ class ListAction extends Controller
 
     /**
      * @group Tasks
+     * @queryParam status Filter by status (pending,completed). Example: completed
      */
     public function __invoke(Request $request): JsonResponse
     {
-        $tasks = $this->taskRepository->all([
+        $tasks = $this->taskRepository->filterByStatus($request->status, [
             'id',
             'title',
             'description',

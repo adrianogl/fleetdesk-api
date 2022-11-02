@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "db55b5fc-1503-4c4b-b8a1-841a1b3a5eda",
+        "_postman_id": "eced45c6-7327-4658-a3e9-8b0b88a9a57f",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"gbruen@example.net\",\"password\":\"incidunt\"}"
+                            "raw": "{\"email\":\"porter51@example.com\",\"password\":\"officia\"}"
                         },
                         "description": "",
                         "auth": {
@@ -87,8 +87,15 @@
                         "url": {
                             "host": "{{baseUrl}}",
                             "path": "api\/tasks",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/tasks"
+                            "query": [
+                                {
+                                    "key": "status",
+                                    "value": "completed",
+                                    "description": "Filter by status (pending,completed).",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/tasks?status=completed"
                         },
                         "method": "GET",
                         "header": [
@@ -148,7 +155,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"qahpoqpfcpanreflctlnpshszxcutroalbfqhckfyzlpqvanbfazmewwwqkesppljctmjzhoxxmihczoqvdrkqykvsnkjpiushgqgvshpbwkhnwgczoslfcchpxnhhedoghqjjdrlkkxaqburfpyhrhtjmludhzfeqfem\",\"description\":\"maxime\"}"
+                            "raw": "{\"title\":\"bbfqeoimiguzgkjqmtutefwubqbltxzoeybtngfyfxeeczcbrmqyqmlcuqwzvsvdkiaaudeacvzsscszpmbztsxmzkocjganykiycqkenjinxnwmxknlvhagqpgfmptheavcvelmfrvkhsbiudjh\",\"description\":\"aut\"}"
                         },
                         "description": ""
                     },

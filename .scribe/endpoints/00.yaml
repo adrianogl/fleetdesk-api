@@ -26,19 +26,19 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: gbruen@example.net
+        example: porter51@example.com
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: incidunt
+        example: officia
         type: string
         custom: []
     cleanBodyParameters:
-      email: gbruen@example.net
-      password: incidunt
+      email: porter51@example.com
+      password: officia
     fileParameters: []
     responses: []
     responseFields: []
@@ -76,7 +76,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer adc8hZV3fa664PekEvD5bg1'
+      - 'Bearer VfaaDedg4c5k36bEh8P1vZ6'
     controller: null
     method: null
     route: null
